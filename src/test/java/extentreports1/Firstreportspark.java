@@ -41,4 +41,9 @@ public class Firstreportspark extends extentclass{
 //			e.printStackTrace();
 //		}
 	}
+	
+	@Test
+	public void test3() {
+		System.out.println("Test4");
+	}
 }
