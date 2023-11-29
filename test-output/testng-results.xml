@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-29T14:11:21 IST" name="Default suite" finished-at="2023-11-29T14:11:23 IST" duration-ms="1977">
+  <suite started-at="2023-11-29T16:58:50 IST" name="Default suite" finished-at="2023-11-29T16:58:52 IST" duration-ms="1868">
     <groups>
     </groups>
-    <test started-at="2023-11-29T14:11:21 IST" name="Default test" finished-at="2023-11-29T14:11:23 IST" duration-ms="1977">
+    <test started-at="2023-11-29T16:58:50 IST" name="Default test" finished-at="2023-11-29T16:58:52 IST" duration-ms="1868">
       <class name="ApiTest.PostApiTest">
-        <test-method signature="PostApi()[pri:0, instance:ApiTest.PostApiTest@6e2829c7]" started-at="2023-11-29T14:11:21 IST" name="PostApi" finished-at="2023-11-29T14:11:23 IST" duration-ms="1773" status="PASS">
+        <test-method signature="PostApi()[pri:0, instance:ApiTest.PostApiTest@6e2829c7]" started-at="2023-11-29T16:58:51 IST" name="PostApi" finished-at="2023-11-29T16:58:52 IST" duration-ms="1659" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PostApi -->
-        <test-method signature="test1()[pri:0, instance:ApiTest.PostApiTest@6e2829c7]" started-at="2023-11-29T14:11:23 IST" name="test1" finished-at="2023-11-29T14:11:23 IST" duration-ms="8" status="PASS">
+        <test-method signature="test1()[pri:0, instance:ApiTest.PostApiTest@6e2829c7]" started-at="2023-11-29T16:58:52 IST" name="test1" finished-at="2023-11-29T16:58:52 IST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method signature="test2()[pri:0, instance:ApiTest.PostApiTest@6e2829c7]" started-at="2023-11-29T14:11:23 IST" name="test2" finished-at="2023-11-29T14:11:23 IST" duration-ms="10" status="PASS">
+        <test-method signature="test2()[pri:0, instance:ApiTest.PostApiTest@6e2829c7]" started-at="2023-11-29T16:58:52 IST" name="test2" finished-at="2023-11-29T16:58:52 IST" duration-ms="18" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test2 -->
-        <test-method signature="test3()[pri:0, instance:ApiTest.PostApiTest@6e2829c7]" started-at="2023-11-29T14:11:23 IST" name="test3" finished-at="2023-11-29T14:11:23 IST" duration-ms="46" status="PASS">
+        <test-method signature="test3()[pri:0, instance:ApiTest.PostApiTest@6e2829c7]" started-at="2023-11-29T16:58:52 IST" name="test3" finished-at="2023-11-29T16:58:52 IST" duration-ms="49" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test3 -->

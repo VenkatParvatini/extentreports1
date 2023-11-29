@@ -1,5 +1,6 @@
 package ApiTest;
 
+import org.testng.ITestContext;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -14,7 +15,10 @@ import io.restassured.specification.RequestSpecification;
 import utilis.*;
 @Listeners(extentreport.class)
 public class PostApiTest extends extentreport {
+	
 	static Response response;
+	static ITestContext context;
+	
 	@Test
 	public static void PostApi() {
 		test.log(Status.INFO, "Post Call started");
@@ -25,16 +29,12 @@ public class PostApiTest extends extentreport {
 		PostApiBuilder postApiBuilder = new PostApiBuilder();
 //		headers headers = new headers();
 		
-		
 		response = RestAssured.given()
 							.spec(reqspec)
 							.when()
 //							.headers(headers.basicheaders())
 							.body(postApiBuilder.postrequestbody("venkat", "it"))
 							.post(ApiPath.pathParam.apiPath.CREATE_POST);
-		
-							
-		
 							
 		test.log(Status.PASS, "POST call is sucess");				
 
@@ -45,11 +45,8 @@ public class PostApiTest extends extentreport {
 		PostApiVerification.responseCodeValidation(response, 201);
 		
 	}
-//	@SuppressWarnings("unlikely-arg-type")
 	@Test
 	public static void test3() {
-		
-//		System.out.println(response.getBody().asString());
 		
 		System.out.println(response.getBody().prettyPrint());
 	}
