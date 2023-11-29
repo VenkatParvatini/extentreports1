@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-27T11:55:07 IST" name="Default suite" finished-at="2023-11-27T11:55:07 IST" duration-ms="176">
+  <suite started-at="2023-11-29T11:08:28 IST" name="Default suite" finished-at="2023-11-29T11:08:28 IST" duration-ms="266">
     <groups>
     </groups>
-    <test started-at="2023-11-27T11:55:07 IST" name="Default test" finished-at="2023-11-27T11:55:07 IST" duration-ms="176">
+    <test started-at="2023-11-29T11:08:28 IST" name="Default test" finished-at="2023-11-29T11:08:28 IST" duration-ms="266">
       <class name="extentreports1.Firstreportspark">
-        <test-method signature="extentreport1()[pri:1, instance:extentreports1.Firstreportspark@7ae0a9ec]" started-at="2023-11-27T11:55:07 IST" name="extentreport1" finished-at="2023-11-27T11:55:07 IST" duration-ms="10" status="PASS">
+        <test-method signature="test3()[pri:0, instance:extentreports1.Firstreportspark@35841320]" started-at="2023-11-29T11:08:28 IST" name="test3" finished-at="2023-11-29T11:08:28 IST" duration-ms="27" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+        <test-method signature="extentreport1()[pri:1, instance:extentreports1.Firstreportspark@35841320]" started-at="2023-11-29T11:08:28 IST" name="extentreport1" finished-at="2023-11-29T11:08:28 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- extentreport1 -->
-        <test-method signature="extentreport2()[pri:2, instance:extentreports1.Firstreportspark@7ae0a9ec]" started-at="2023-11-27T11:55:07 IST" name="extentreport2" finished-at="2023-11-27T11:55:07 IST" duration-ms="2" status="FAIL">
+        <test-method signature="extentreport2()[pri:2, instance:extentreports1.Firstreportspark@35841320]" started-at="2023-11-29T11:08:28 IST" name="extentreport2" finished-at="2023-11-29T11:08:28 IST" duration-ms="3" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>

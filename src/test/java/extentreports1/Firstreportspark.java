@@ -20,7 +20,6 @@ public class Firstreportspark extends extentclass{
 	
 	@Test(priority=1)
 	public void extentreport1() {
-		test = extent.createTest("Testing demo at 1: "+dtf.format(now));
 //		test.log(Status.PASS, "Test got started");
 		System.out.println("Test 1");
 		assertTrue(true);
@@ -29,21 +28,10 @@ public class Firstreportspark extends extentclass{
 	
 	@Test(priority=2)
 	public void extentreport2() {
-		test = extent.createTest("Testing demo at 2: "+dtf.format(now));
 //		test.log(Status.PASS, "Test got started");
 		System.out.println("Test 2");
 		assertTrue(false);
 //		test.log(Status.PASS, "Test got success");
-//		try {
-			
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-	}
-	
-	@Test
-	public void test3() {
-		System.out.println("Test4");
-	}
+	} 
+	 
 }
