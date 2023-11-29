@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="extentreports1.Firstreportspark">
+      <class name="ApiTest.PostApiTest">
         <methods>
-          <include name="extentreport2"/>
+          <include name="test2"/>
         </methods>
-      </class> <!-- extentreports1.Firstreportspark -->
+      </class> <!-- ApiTest.PostApiTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
