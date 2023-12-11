@@ -26,12 +26,11 @@ public class extentclass implements ITestListener{
 //	static ExtentReports report;
 	DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 	   LocalDateTime now = LocalDateTime.now();
-	   
 	   ExtentReports extent = new ExtentReports();
 	   ExtentSparkReporter spark;
 	   ExtentTest test;
 
-	
+	 
 	@Override
 	public void onTestStart(ITestResult result) {
 		test = extent.createTest("Testing demo at : "+dtf.format(now),"des");

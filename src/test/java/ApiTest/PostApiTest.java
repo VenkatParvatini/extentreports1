@@ -1,7 +1,11 @@
 package ApiTest;
 
+import java.io.IOException;
+
 import org.testng.ITestContext;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
@@ -13,43 +17,44 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import utilis.*;
+
 @Listeners(extentreport.class)
 public class PostApiTest extends extentreport {
-	
+
 	static Response response;
 	static ITestContext context;
-	
+
 	@Test
-	public static void PostApi() {
+	@Parameters("Environment")
+	public static void PostApi(@Optional("uat") String Environment) throws IOException {
 		test.log(Status.INFO, "Post Call started");
 		RequestSpecBuilder requestSpecBuilder = new RequestSpecBuilder();
-		requestSpecBuilder.setBaseUri("https://reqres.in");
+		requestSpecBuilder.setBaseUri(EnviClass.produri(Environment).get("uri"));
 		RequestSpecification reqspec = requestSpecBuilder.build();
-
 		PostApiBuilder postApiBuilder = new PostApiBuilder();
 //		headers headers = new headers();
-		
-		response = RestAssured.given()
+		response = RestAssured
+							.given()
 							.spec(reqspec)
 							.when()
 //							.headers(headers.basicheaders())
-							.body(postApiBuilder.postrequestbody("venkat", "it"))
-							.post(ApiPath.pathParam.apiPath.CREATE_POST);
-							
-		test.log(Status.PASS, "POST call is sucess");				
+				 			.body(postApiBuilder.postrequestbody("venkat", "it"))
+				 			.post(ApiPath.pathParam.apiPath.CREATE_POST);
+		test.log(Status.PASS, "POST call is sucess");
 
 	}
-	
+
 	@Test
 	public static void test1() {
 		PostApiVerification.responseCodeValidation(response, 201);
-		
 	}
+
 	@Test
 	public static void test3() {
-		
-		System.out.println(response.getBody().prettyPrint());
+//		System.out.println(response.getBody().prettyPrint());
+		System.out.println("second reposne is:" + "/ln" + response.body().prettyPeek());
 	}
+
 	@Test
 	public static void test2() {
 		PostApiVerification.responseJSONObject(response, "id");
