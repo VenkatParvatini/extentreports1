@@ -5,7 +5,9 @@
     <classes>
       <class name="ApiTest.PostApiTest">
         <methods>
-          <include name="PostApi" invocation-numbers="0"/>
+          <include name="test1"/>
+          <include name="PostApi"/>
+          <include name="test2"/>
         </methods>
       </class> <!-- ApiTest.PostApiTest -->
     </classes>

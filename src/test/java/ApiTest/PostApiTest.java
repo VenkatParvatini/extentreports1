@@ -2,6 +2,7 @@ package ApiTest;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
@@ -26,7 +27,7 @@ public class PostApiTest extends extentreport {
 
 	@Test
 	@Parameters("Environment")
-	public static void PostApi(@Optional("uat") String Environment) throws IOException {
+	public static void PostApi(@Optional("stage") String Environment) throws IOException {
 		test.log(Status.INFO, "Post Call started");
 		RequestSpecBuilder requestSpecBuilder = new RequestSpecBuilder();
 		requestSpecBuilder.setBaseUri(EnviClass.produri(Environment).get("uri"));
@@ -44,18 +45,19 @@ public class PostApiTest extends extentreport {
 
 	}
 
-	@Test
+	@Test(dependsOnMethods = "PostApi")
 	public static void test1() {
 		PostApiVerification.responseCodeValidation(response, 201);
+		Assert.assertFalse(true);
 	}
 
-	@Test
+	@Test(dependsOnMethods = "test1", alwaysRun = true) //softDependency
 	public static void test3() {
 //		System.out.println(response.getBody().prettyPrint());
-		System.out.println("second reposne is:" + "/ln" + response.body().prettyPeek());
+		System.out.println("second reposne is:" + "/ln" + response.body().prettyPrint());
 	}
 
-	@Test
+	@Test(dependsOnMethods = "test1") //hardDependency
 	public static void test2() {
 		PostApiVerification.responseJSONObject(response, "id");
 	}
